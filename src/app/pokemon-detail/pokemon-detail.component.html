@@ -1,15 +1,22 @@
 <!-- src/app/components/pokemon-detail/pokemon-detail.component.html -->
-<div *ngIf="pokemon; else loading">
-  <h2>{{ pokemon.name | titlecase }}</h2>
-  <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
-  <p><strong>Height:</strong> {{ pokemon.height }}</p>
-  <p><strong>Weight:</strong> {{ pokemon.weight }}</p>
-  <p><strong>Types:</strong>
-    <span *ngFor="let type of pokemon.types">
-      {{ type.type.name }}&nbsp;
-    </span>
-  </p>
+<div *ngIf="pokemon; else loading" class="pokemon-detail">
+  <div class="pokemon-header">
+    <h2>{{ pokemon.name | titlecase }}</h2>
+    <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" class="pokemon-image" />
+  </div>
+
+  <div class="pokemon-info">
+    <p><strong>Height:</strong> {{ pokemon.height / 10 }} m</p>
+    <p><strong>Weight:</strong> {{ pokemon.weight / 10 }} kg</p>
+
+    <p><strong>Types:</strong>
+      <span *ngFor="let type of pokemon.types" class="pokemon-type">
+        {{ type.type.name | titlecase }}
+      </span>
+    </p>
+  </div>
 </div>
+
 <ng-template #loading>
-  <p>Loading...</p>
+  <div class="loading">Loading...</div>
 </ng-template>
