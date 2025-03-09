@@ -21,7 +21,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   loadPokemons(): void {
-    this.pokedexService.getPokemons(50, 0).subscribe(response => {
+    this.pokedexService.getPokemons(100, 0).subscribe(response => {
       this.pokemons = response.results;
     });
   }
