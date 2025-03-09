@@ -1,173 +1,99 @@
-.pokemon-detail {
-  width: 100%;
-  max-width: 600px; /* Ajuste de largura máxima */
-  margin: 5% auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 12px; /* Bordas mais arredondadas */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
-  text-align: center;
-  z-index: 1; /* Garante que o conteúdo do Pokémon esteja acima de outros elementos */
+.pokemon-search {
+  max-width: 60%;
+  margin: 15% auto; /* Aumentei a margem superior para descer mais a pesquisa */
+  padding: 4%;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.pokemon-detail h2 {
+.pokemon-search h2 {
   font-family: 'Pokemon', sans-serif;
-  font-size: 2.5rem;
-  color: #d32f2f;
-  margin-bottom: 2rem;
-  text-transform: capitalize;
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 2rem;
+  margin-bottom: 5%;
 }
 
-.pokemon-detail img {
-  width: 100%;
-  max-width: 200px; /* Tamanho fixo da imagem */
-  height: auto;
-  margin-bottom: 2rem;
-  border-radius: 8px; /* Bordas arredondadas para a imagem */
-}
-
-.pokemon-detail p {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.pokemon-detail p strong {
-  color: #d32f2f;
-}
-
-.pokemon-detail .types {
+.form-container {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
 }
 
-.pokemon-detail .types span {
-  background-color: #f1f1f1;
-  padding: 8px 16px;
-  border-radius: 20px;
+input {
+  width: 100%;
+  padding: 8px;
   font-size: 1rem;
-  color: #333;
-  text-transform: capitalize;
-  border: 2px solid #d32f2f;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 4%;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
 }
 
 button {
   width: 100%;
-  max-width: 250px; /* Tamanho máximo do botão */
-  padding: 14px;
+  padding: 12px;
   font-size: 1.2rem;
   color: #fff;
-  background-color: #d32f2f;
+  background-color: #ff4d4d;
   border: none;
-  border-radius: 30px; /* Bordas bem arredondadas */
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #c2185b;
-  transform: scale(1.05);
+  background-color: #9a1c1c;
 }
 
 button:active {
-  background-color: #b71c1c;
-  transform: scale(1);
+  background-color: #7a1c1c;
 }
 
-button:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(211, 47, 47, 0.8);
+form {
+  width: 100%;
 }
 
-button.back-button {
-  background-color: #ff4d4d;
-  width: auto;
-  padding: 10px 20px;
-  margin-top: 1rem;
-  font-size: 1rem;
-  border-radius: 50px;
-}
-
-button.back-button:hover {
-  background-color: #ffcb05;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .pokemon-detail {
-    width: 90%;
-    padding: 1rem;
-    margin-top: 8rem; /* Aumentei a margem superior para evitar que o header sobreponha */
-  }
-
-  .pokemon-detail h2 {
-    font-size: 2rem;
-  }
-
-  .pokemon-detail img {
-    max-width: 150px;
-  }
-
-  .pokemon-detail p {
-    font-size: 1rem;
-  }
-
-  .pokemon-detail .types span {
-    font-size: 0.9rem;
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  button.back-button {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
+form button {
+  margin-top: 4%;
 }
 
 /* Garantir que o conteúdo não seja sobreposto pelo header */
 body {
-  padding-top: 6rem; /* Ajusta a distância do topo para compensar o header fixo */
+  padding-top: 6rem;
 }
 
-.not-found-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.not-found-img {
-  max-width: 150px; /* Imagem fofa com largura controlada */
-  height: auto;
-  margin-bottom: 1.5rem;
-}
-
-.not-found-message {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #d32f2f; /* Vermelho Pokémon */
-  font-family: 'Pokemon', sans-serif;
-  margin-top: 1rem;
-}
-
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-  .not-found-message {
-    font-size: 1.5rem; /* Ajuste do tamanho da fonte para telas menores */
+  .pokemon-search {
+    max-width: 80%; /* Ajustei para ocupar mais a largura na tela */
+    margin-top: 10rem; /* Aumentei para descer mais a pesquisa */
   }
 
-  .not-found-img {
-    max-width: 120px; /* Ajuste da largura da imagem em telas pequenas */
+  .pokemon-search h2 {
+    font-size: 1.8rem; /* Ajustei o tamanho da fonte */
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  input {
+    padding: 10px; /* Aumentei o padding para maior conforto */
+  }
+
+  button {
+    padding: 14px;
+  }
+
+  form button {
+    margin-top: 5%;
   }
 }
