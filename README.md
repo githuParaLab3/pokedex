@@ -1,59 +1,28 @@
-# Pokedex
+Pokédex - Aplicação em Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+Este é um projeto de Pokédex desenvolvido com Angular, utilizando standalone components para criar uma interface dinâmica, limpa e responsiva. A aplicação permite buscar e visualizar detalhes de diferentes Pokémon, com uma interface atrativa e fácil de usar.
+Funcionalidades
 
-## Development server
+    Lista de Pokémon: Exibe uma lista de Pokémon com nome e imagem.
+    Busca: Permite pesquisar por nome ou ID de Pokémon.
+    Detalhes do Pokémon: Exibe informações detalhadas de cada Pokémon, como tipo, habilidades e estatísticas.
+    Design Responsivo: Totalmente responsivo para dispositivos móveis e desktop, com um layout moderno.
 
-To start a local development server, run:
+Tecnologias
 
-```bash
-ng serve
-```
+    Angular 19: Framework para desenvolvimento de Single Page Applications (SPA).
+    Typescript: Linguagem utilizada para o desenvolvimento da aplicação.
+    CSS: Estilização dos componentes, com foco em um design limpo e responsivo.
+    PokedexService: Serviço criado para interagir com a API e obter informações sobre os Pokémon.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Estrutura do Projeto
 
-## Code scaffolding
+A aplicação é composta por três componentes principais, todos utilizando standalone components do Angular:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+    pokemon-list: Exibe a lista de Pokémon com um filtro de busca.
+    pokemon-search: Componente de busca para filtrar Pokémon pela sua ID ou nome.
+    pokemon-detail: Exibe as informações detalhadas de um Pokémon selecionado.
 
-```bash
-ng generate component component-name
-```
+Serviço
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    PokedexService: Serviço responsável por buscar os dados dos Pokémon da API externa e fornecê-los aos componentes.
