@@ -1,8 +1,15 @@
-<div class="search-container">
-  <h2>Search Pokémon</h2>
-  <!-- Formulário usando formGroup -->
-  <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
-    <input type="text" formControlName="term" placeholder="Enter Pokémon name" />
-    <button type="submit">Search</button>
-  </form>
+<!-- src/app/components/pokemon-search/pokemon-search.component.html -->
+<div class="pokemon-search">
+  <h2>Pesquisar Pokémon</h2>
+  <div class="form-container">
+    <form (ngSubmit)="onSearch()">
+      <!-- Utilizando ngModel para o binding bidirecional -->
+      <input
+        type="text"
+        [(ngModel)]="term"
+        name="term"
+        placeholder="Digite o nome ou número do Pokémon" />
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
 </div>

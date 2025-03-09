@@ -1,33 +1,29 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
+import { FormsModule } from '@angular/forms';  // Importando FormsModule
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-search',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule],  // Adicionando FormsModule aqui
   templateUrl: './pokemon-search.component.html',
-  styleUrls: ['./pokemon-search.component.css']
+  styleUrls: ['./pokemon-search.component.css'],
 })
 export class PokemonSearchComponent {
-  // Utilizando FormGroup para o formulário de busca
-  searchForm: FormGroup = new FormGroup({
-    term: new FormControl('')
-  });
+  term: string = ''; // A variável de pesquisa diretamente
 
   constructor(private router: Router) {}
 
   onSearch(): void {
-    // Acessa o valor do formulário de forma segura
-    const rawTerm = this.searchForm.get('term')?.value;
-    const term = (rawTerm || '').trim().toLowerCase();
+    // Manipulando o termo de pesquisa de forma simples
+    const searchTerm = this.term.trim().toLowerCase();
 
-    console.log('Termo pesquisado:', term);
+    console.log('Termo pesquisado:', searchTerm);
 
-    if (term) {
+    if (searchTerm) {
       // Navega para a rota de detalhe do Pokémon
-      this.router.navigate(['/pokemon', term])
+      this.router.navigate(['/pokemon', searchTerm])
         .then(success => console.log('Navegação bem-sucedida:', success))
         .catch(err => console.error('Erro na navegação:', err));
     } else {

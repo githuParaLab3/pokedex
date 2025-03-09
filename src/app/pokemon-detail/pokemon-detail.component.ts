@@ -1,13 +1,14 @@
-// src/app/components/pokemon-detail/pokemon-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { PokedexService } from '../pokedex.service';
+import { PokedexService } from '../pokedex.service'; // PokedexService
+import { Location } from '@angular/common'; // Location
+import { TitleCasePipe } from '@angular/common'; // TitleCasePipe
+import { NgIf, NgForOf } from '@angular/common'; // NgIf e NgFor
 
 @Component({
   selector: 'app-pokemon-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [TitleCasePipe, NgIf, NgForOf], // Importa as diretivas e pipe necessários
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.css']
 })
@@ -16,15 +17,22 @@ export class PokemonDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private pokedexService: PokedexService
+    private pokedexService: PokedexService, // PokedexService
+    private location: Location // Serviço Location para voltar
   ) {}
 
   ngOnInit(): void {
-    const name = this.route.snapshot.paramMap.get('name');
-    if (name) {
-      this.pokedexService.getPokemon(name).subscribe(data => {
-        this.pokemon = data;
-      });
-    }
+    this.loadPokemon();
+  }
+
+  loadPokemon(): void {
+    const name = this.route.snapshot.paramMap.get('name')!;
+    this.pokedexService.getPokemon(name).subscribe(pokemon => {
+      this.pokemon = pokemon;
+    });
+  }
+
+  goBack(): void {
+    this.location.back(); // Volta para a página anterior
   }
 }

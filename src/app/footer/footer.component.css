@@ -1,0 +1,21 @@
+/* src/app/components/footer/footer.component.css */
+footer {
+  background-color: #ff4d4d; /* Cor de fundo escuro */
+  color: white;
+  padding: 15px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+}

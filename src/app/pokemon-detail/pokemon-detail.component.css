@@ -1,54 +1,97 @@
-/* src/app/components/pokemon-detail/pokemon-detail.component.scss */
+/* src/app/components/pokemon-detail/pokemon-detail.component.css */
+
 .pokemon-detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 40%; /* Componente ocupa 40% da largura da tela */
+  margin: 5% auto; /* Centraliza o componente com 5% de margem superior e inferior */
+  padding: 3%; /* Padding reduzido para mais equilíbrio */
+  background-color: #fff; /* Fundo branco */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.pokemon-detail h2 {
+  font-family: 'Pokemon', sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  margin: 20px auto;
+  color: #d32f2f; /* Vermelho Pokémon */
+  font-size: 4vw; /* Ajuste de tamanho de fonte do título */
+  margin-bottom: 3%; /* Espaço abaixo do título */
 }
 
-.pokemon-header {
+.pokemon-detail img {
+  width: 60%; /* Imagem ocupa 60% da largura do componente */
+  max-width: 120px; /* Limita a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 4%; /* Espaço abaixo da imagem */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pokemon-detail p {
+  font-size: 1.6vw; /* Tamanho da fonte reduzido para os textos */
+  margin-bottom: 2%; /* Espaço entre os parágrafos */
+}
+
+.pokemon-detail p strong {
+  color: #d32f2f; /* Cor do texto em negrito, igual ao título */
+}
+
+.pokemon-detail .types {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os tipos de Pokémon */
 }
 
-.pokemon-image {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  border-radius: 10px;
-  border: 4px solid #ffcb05;
-  margin-top: 10px;
+.pokemon-detail .types span {
+  background-color: #f1f1f1; /* Cor de fundo suave para os tipos */
+  margin: 2% 1%; /* Margem de 2% no topo e 1% nas laterais */
+  padding: 6px 12px;
+  border-radius: 16px; /* Bordas arredondadas */
+  font-size: 1.6vw; /* Tamanho da fonte ajustado para os tipos */
+  color: #333; /* Cor do texto */
+  text-transform: capitalize; /* Deixa a primeira letra do tipo em maiúscula */
 }
 
-.pokemon-info {
-  font-size: 16px;
-  color: #333;
+button {
+  width: 50%; /* O botão ocupa 50% da largura do componente */
+  padding: 2% 0; /* Padding ajustado para o botão */
+  font-size: 1.6vw; /* Tamanho de fonte menor */
+  color: #fff; /* Cor do texto no botão */
+  background-color: #d32f2f; /* Cor vermelha do botão */
+  border: none;
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição suave */
+  margin-top: 4%; /* Espaço superior entre o conteúdo e o botão */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.pokemon-info p {
-  margin: 8px 0;
+button:hover {
+  background-color: #c2185b; /* Cor mais escura de vermelho no hover */
+  transform: scale(1.05); /* Efeito de aumento no hover */
 }
 
-.pokemon-type {
-  background-color: #ffcb05;
-  padding: 5px 10px;
-  border-radius: 20px;
-  margin-right: 8px;
-  text-transform: capitalize;
-  font-weight: bold;
-  color: #3d3d3d;
+button:active {
+  background-color: #b71c1c; /* Cor mais escura no clique */
+  transform: scale(1); /* Retorna ao tamanho normal */
 }
 
-.loading {
-  text-align: center;
-  font-size: 20px;
-  color: #888;
+button:focus {
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 4% rgba(211, 47, 47, 0.8); /* Efeito de sombra ao focar o botão */
+}
+
+button.back-button {
+  font-size: 1.4vw; /* Tamanho de fonte reduzido para o botão de voltar */
+  background-color: #ff4d4d; /* Cor escura para o botão de voltar */
+  padding: 2% 4%; /* Padding ajustado para o botão de voltar */
+  width: auto; /* Tamanho automático para o botão */
+  margin-top: 2%; /* Espaço superior do botão */
+  display: inline-block; /* Exibe o botão inline */
+}
+
+button.back-button:hover {
+  background-color: #ffcb05; /* Cor mais escura no hover para o botão de voltar */
 }

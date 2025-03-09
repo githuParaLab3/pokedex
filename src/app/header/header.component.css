@@ -1,0 +1,42 @@
+/* src/app/components/header/header.component.css */
+header {
+  background-color: #ff4d4d; /* Cor de fundo vermelha */
+  padding: 15px 20px; /* Espaçamento interno */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Garante que o header fique sobre outros elementos */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffcb05; /* Cor dourada no hover */
+}
