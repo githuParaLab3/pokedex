@@ -1,12 +1,12 @@
-/* src/app/components/header/header.component.css */
 header {
-  background-color: #ff4d4d; /* Cor de fundo vermelha */
-  padding: 15px 20px; /* Espaçamento interno */
+  background-color: #d32f2f; /* Cor padrão da Pokédex */
+  padding: 1rem 2rem; /* Ajuste de espaçamento para mais flexibilidade */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000; /* Garante que o header fique sobre outros elementos */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sutil sombreamento para destacar */
 }
 
 .navbar {
@@ -18,30 +18,54 @@ header {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 2rem;
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
-
+/* Centralizando os links de navegação */
 .nav-links {
   display: flex;
   justify-content: center; /* Centraliza os botões */
-  width: 100%; /* Garante que ocupe toda a largura */
+  width: 50%; /* Ajusta para ficar com espaçamento ideal */
   gap: 2vw; /* Espaçamento proporcional entre os botões */
   padding: 0;
   margin: 0;
-  list-style: none; /* Remove os pontos da lista */
+  list-style: none;
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.1rem; /* Ajuste no tamanho da fonte */
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem; /* Espaçamento interno para maior área de clique */
 }
 
 .nav-links li a:hover {
   color: #ffcb05; /* Cor dourada no hover */
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .nav-links {
+    width: 100%; /* Ocupa toda a largura disponível */
+    justify-content: center;
+    gap: 1.5rem; /* Diminui o espaçamento para telas pequenas */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Tamanho ajustado da logo */
+  }
+
+  .nav-links li a {
+    font-size: 1rem; /* Ajuste do tamanho da fonte para mobile */
+    padding: 0.5rem; /* Ajuste de padding para mobile */
+  }
 }

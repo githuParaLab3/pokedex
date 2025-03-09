@@ -1,7 +1,5 @@
-/* src/app/components/pokemon-detail/pokemon-detail.component.css */
-
 .pokemon-detail {
-  width: 40%; /* Componente ocupa 40% da largura da tela */
+  width: 50%; /* A largura foi ajustada para 50% para maior flexibilidade */
   margin: 5% auto; /* Centraliza o componente com 5% de margem superior e inferior */
   padding: 3%; /* Padding reduzido para mais equilíbrio */
   background-color: #fff; /* Fundo branco */
@@ -52,10 +50,11 @@
   text-transform: capitalize; /* Deixa a primeira letra do tipo em maiúscula */
 }
 
+/* Botão principal (de voltar) */
 button {
-  width: 50%; /* O botão ocupa 50% da largura do componente */
-  padding: 2% 0; /* Padding ajustado para o botão */
-  font-size: 1.6vw; /* Tamanho de fonte menor */
+  width: 40%; /* O botão ocupa 40% da largura do componente */
+  padding: 3% 0; /* Padding ajustado para o botão */
+  font-size: 1.6vw; /* Tamanho de fonte reduzido para maior harmonia */
   color: #fff; /* Cor do texto no botão */
   background-color: #d32f2f; /* Cor vermelha do botão */
   border: none;
@@ -83,6 +82,7 @@ button:focus {
   box-shadow: 0 0 4% rgba(211, 47, 47, 0.8); /* Efeito de sombra ao focar o botão */
 }
 
+/* Botão de Voltar */
 button.back-button {
   font-size: 1.4vw; /* Tamanho de fonte reduzido para o botão de voltar */
   background-color: #ff4d4d; /* Cor escura para o botão de voltar */
@@ -93,5 +93,5 @@ button.back-button {
 }
 
 button.back-button:hover {
-  background-color: #ffcb05; /* Cor mais escura no hover para o botão de voltar */
+  background-color: #ffcb05; /* Cor mais clara no hover para o botão de voltar */
 }

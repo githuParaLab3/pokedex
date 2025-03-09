@@ -1,21 +1,36 @@
-/* src/app/components/footer/footer.component.css */
 footer {
-  background-color: #ff4d4d; /* Cor de fundo escuro */
-  color: white;
-  padding: 15px;
+  background-color: #d32f2f; /* Cor padrão da Pokédex */
+  color: #fff;
   width: 100%;
+  padding: 1rem 0;
   position: fixed;
   bottom: 0;
   left: 0;
+  text-align: center; /* Centraliza o conteúdo */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Sutil sombreamento para destacar */
 }
 
 .footer-content {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo */
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Para não quebrar em telas menores */
+  gap: 0.5rem;
 }
 
 footer p {
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
+  padding: 0 1rem;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem 0;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }

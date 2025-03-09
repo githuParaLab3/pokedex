@@ -1,43 +1,54 @@
 .pokemon-list {
-  max-width: 1200px;
+  max-width: 100%; /* Agora a largura é 100%, ajustando para qualquer tamanho de tela */
   margin: 6rem auto 2rem; /* Aumentei o topo para evitar que o header cubra */
-  padding: 0 1rem;
+  padding: 0 2%; /* Alterei o padding para usar porcentagens */
 }
 
 .pokemon-list h2 {
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 2.5rem;
-  color: #ef5350;
+  font-size: 5vw; /* Usando tamanho de fonte baseado em % da tela para responsividade */
+  color: #ef5350; /* Cor do título */
 }
 
 .pokemon-list ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta automaticamente o número de colunas */
+  gap: 1.5rem; /* Aumentei um pouco o espaçamento entre os itens */
   list-style: none;
   padding: 0;
 }
 
 .pokemon-list li {
-  background-color: #f7f7f7;
-  border: 2px solid #ef5350;
-  border-radius: 10px;
-  padding: 1rem;
+  background-color: #f7f7f7; /* Cor de fundo suave */
+  border: 2px solid #ef5350; /* Borda vermelha */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 2%; /* Padding aumentado para espaçamento adequado */
   text-align: center;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do li */
+  align-items: center;
+  flex-direction: column;
 }
 
 .pokemon-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Efeito de elevação */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombrinha suave */
 }
 
 .pokemon-list a {
   text-decoration: none;
-  color: #333;
+  color: #333; /* Cor do texto do link */
   font-weight: bold;
   display: block;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0; /* Padding adequado para os links */
+}
+
+.pokemon-list img {
+  max-width: 100%; /* Ajusta a imagem para ter largura máxima */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Bordas arredondadas na imagem */
+  object-fit: cover; /* A imagem preenche o container sem distorção */
 }
