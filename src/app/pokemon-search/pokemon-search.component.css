@@ -1,18 +1,19 @@
+/* src/app/components/pokemon-search/pokemon-search.component.css */
 .pokemon-search {
-  max-width: 80%; /* Ajustando para ocupar mais espaço em telas maiores */
-  margin: 10% auto; /* Mantém uma margem superior de 10%, centralizando o conteúdo */
-  padding: 4%; /* Padding em porcentagem para garantir a responsividade */
+  max-width: 60%; /* Largura ajustada como porcentagem */
+  margin: 10% auto; /* Margem superior de 10% para afastar do header */
+  padding: 4%; /* Padding interno */
   background-color: #f9f9f9; /* Cor de fundo suave */
-  border-radius: 8px; /* Bordas arredondadas para suavizar */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
 }
 
 .pokemon-search h2 {
   font-family: 'Pokemon', sans-serif;
   text-align: center;
   color: #ff4d4d; /* Vermelho Pokémon */
-  font-size: 5vw; /* Usando vw para garantir que a fonte seja responsiva */
-  margin-bottom: 4%; /* Espaço abaixo do título */
+  font-size: 2rem;
+  margin-bottom: 5%; /* Espaço abaixo do título */
 }
 
 .form-container {
@@ -23,13 +24,13 @@
 
 input {
   width: 100%; /* O campo de entrada ocupa toda a largura disponível */
-  padding: 12px; /* Padding maior para um campo mais confortável */
-  font-size: 1.2rem; /* Tamanho da fonte ajustado */
+  padding: 8px; /* Ajusta o padding para deixar o campo mais adequado */
+  font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 4%; /* Espaço inferior entre o input e o botão */
   outline: none;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
 }
 
 input:focus {
@@ -40,9 +41,9 @@ input:focus {
 button {
   width: 100%; /* O botão ocupa toda a largura disponível */
   padding: 12px; /* Tamanho do botão ajustado */
-  font-size: 1.4rem; /* Tamanho de fonte maior para melhorar a legibilidade */
+  font-size: 1.2rem;
   color: #fff;
-  background-color: #ff4d4d; /* Cor suave para o botão, combinando com o tema */
+  background-color: #ff4d4d; /* Cor mais suave para o botão, mas ainda no tom vermelho Pokémon */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -63,4 +64,26 @@ form {
 
 form button {
   margin-top: 4%; /* Margem superior do botão */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .pokemon-search {
+    margin-top: 12% !important; /* Aumenta a margem superior para garantir que o conteúdo não sobreponha o header */
+    width: 90%; /* Ajusta a largura para ocupar mais espaço em telas pequenas */
+    padding: 6% 4%; /* Ajuste de padding para telas menores */
+  }
+
+  .pokemon-search h2 {
+    font-size: 1.6rem; /* Reduz o tamanho da fonte em telas menores */
+  }
+
+  .form-container input {
+    font-size: 1rem; /* Ajusta o tamanho da fonte para facilitar a digitação em telas pequenas */
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 14px; /* Tamanho do botão para telas menores */
+  }
 }
