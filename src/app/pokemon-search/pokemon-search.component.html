@@ -1,7 +1,8 @@
 <div class="search-container">
   <h2>Search Pokémon</h2>
-  <form (ngSubmit)="onSearch()">
-    <input type="text" [formControl]="searchControl" placeholder="Enter Pokémon name">
+  <!-- Formulário usando formGroup -->
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <input type="text" formControlName="term" placeholder="Enter Pokémon name" />
     <button type="submit">Search</button>
   </form>
 </div>
