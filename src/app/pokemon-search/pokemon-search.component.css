@@ -64,3 +64,27 @@ form {
 form button {
   margin-top: 4%; /* Margem superior do botão */
 }
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .pokemon-search {
+    width: 90%; /* Ajustando a largura para 90% em dispositivos móveis */
+    padding: 4%; /* Mantendo o padding para garantir um espaçamento confortável */
+    margin-top: 8rem; /* Aumentando a margem superior para não ser sobreposto pelo header */
+  }
+
+  .pokemon-search h2 {
+    font-size: 6vw; /* Ajustando o tamanho do título para ser proporcional à tela */
+    margin-bottom: 2rem; /* Reduzindo o espaçamento inferior do título */
+  }
+
+  input {
+    font-size: 1rem; /* Ajustando o tamanho da fonte para inputs em telas pequenas */
+    padding: 10px; /* Ajustando o padding para telas menores */
+  }
+
+  button {
+    font-size: 1.2rem; /* Ajustando o tamanho da fonte do botão para telas pequenas */
+    padding: 14px; /* Ajustando o padding do botão */
+  }
+}
