@@ -1,7 +1,6 @@
-/* Exemplo de src/app/components/pokemon-list/pokemon-list.component.css */
 .pokemon-list {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 6rem auto 2rem; /* Aumentei o topo para evitar que o header cubra */
   padding: 0 1rem;
 }
 
