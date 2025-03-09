@@ -1,12 +1,20 @@
-// src/app/app-routing.ts
 import { Routes } from '@angular/router';
-import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
-import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
-import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 
 export const routes: Routes = [
-  { path: '', component: PokemonListComponent },
-  { path: 'pokemon/:name', component: PokemonDetailComponent },
-  { path: 'search', component: PokemonSearchComponent },
+  {
+    path: '',
+    loadComponent: () =>
+      import('./pokemon-list/pokemon-list.component').then(m => m.PokemonListComponent)
+  },
+  {
+    path: 'pokemon/:name',
+    loadComponent: () =>
+      import('./pokemon-detail/pokemon-detail.component').then(m => m.PokemonDetailComponent)
+  },
+  {
+    path: 'search',
+    loadComponent: () =>
+      import('./pokemon-search/pokemon-search.component').then(m => m.PokemonSearchComponent)
+  },
   { path: '**', redirectTo: '' }
 ];
