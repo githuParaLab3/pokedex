@@ -7,6 +7,7 @@
   border-radius: 12px; /* Bordas mais arredondadas */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
   text-align: center;
+  z-index: 1; /* Garante que o conteúdo do Pokémon esteja acima de outros elementos */
 }
 
 .pokemon-detail h2 {
@@ -103,6 +104,7 @@ button.back-button:hover {
   .pokemon-detail {
     width: 90%;
     padding: 1rem;
+    margin-top: 8rem; /* Aumentei a margem superior para evitar que o header sobreponha */
   }
 
   .pokemon-detail h2 {
@@ -130,4 +132,9 @@ button.back-button:hover {
     font-size: 1rem;
     padding: 8px 16px;
   }
+}
+
+/* Garantir que o conteúdo não seja sobreposto pelo header */
+body {
+  padding-top: 6rem; /* Ajusta a distância do topo para compensar o header fixo */
 }

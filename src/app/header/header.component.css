@@ -1,3 +1,4 @@
+/* Header */
 header {
   background-color: #d32f2f; /* Cor padrão da Pokédex */
   padding: 1rem 2rem; /* Ajuste de espaçamento para mais flexibilidade */
@@ -68,4 +69,172 @@ header {
     font-size: 1rem; /* Ajuste do tamanho da fonte para mobile */
     padding: 0.5rem; /* Ajuste de padding para mobile */
   }
+}
+
+/* Ajustes para garantir que o conteúdo não seja sobreposto pelo header */
+
+/* Detalhes */
+.pokemon-detail {
+  width: 40%; /* Componente ocupa 40% da largura da tela */
+  margin: 8rem auto 2rem; /* Aumentei o topo para evitar que o header cubra */
+  padding: 3%; /* Padding reduzido para mais equilíbrio */
+  background-color: #fff; /* Fundo branco */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4% 8% rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.pokemon-detail h2 {
+  font-family: 'Pokemon', sans-serif;
+  text-align: center;
+  color: #d32f2f; /* Vermelho Pokémon */
+  font-size: 4vw; /* Ajuste de tamanho de fonte do título */
+  margin-bottom: 3%; /* Espaço abaixo do título */
+}
+
+/* Ajuste de tamanho e espaço para imagens */
+.pokemon-detail img {
+  width: 60%; /* Imagem ocupa 60% da largura do componente */
+  max-width: 120px; /* Limita a largura máxima da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 4%; /* Espaço abaixo da imagem */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pokemon-detail p {
+  font-size: 1.6vw; /* Tamanho da fonte reduzido para os textos */
+  margin-bottom: 2%; /* Espaço entre os parágrafos */
+}
+
+.pokemon-detail p strong {
+  color: #d32f2f; /* Cor do texto em negrito, igual ao título */
+}
+
+.pokemon-detail .types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os tipos de Pokémon */
+}
+
+.pokemon-detail .types span {
+  background-color: #f1f1f1; /* Cor de fundo suave para os tipos */
+  margin: 2% 1%; /* Margem de 2% no topo e 1% nas laterais */
+  padding: 6px 12px;
+  border-radius: 16px; /* Bordas arredondadas */
+  font-size: 1.6vw; /* Tamanho da fonte ajustado para os tipos */
+  color: #333; /* Cor do texto */
+  text-transform: capitalize; /* Deixa a primeira letra do tipo em maiúscula */
+}
+
+button {
+  width: 50%; /* O botão ocupa 50% da largura do componente */
+  padding: 2% 0; /* Padding ajustado para o botão */
+  font-size: 1.6vw; /* Tamanho de fonte menor */
+  color: #fff; /* Cor do texto no botão */
+  background-color: #d32f2f; /* Cor vermelha do botão */
+  border: none;
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição suave */
+  margin-top: 4%; /* Espaço superior entre o conteúdo e o botão */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button:hover {
+  background-color: #c2185b; /* Cor mais escura de vermelho no hover */
+  transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+button:active {
+  background-color: #b71c1c; /* Cor mais escura no clique */
+  transform: scale(1); /* Retorna ao tamanho normal */
+}
+
+button:focus {
+  outline: none; /* Remove o contorno padrão */
+  box-shadow: 0 0 4% rgba(211, 47, 47, 0.8); /* Efeito de sombra ao focar o botão */
+}
+
+button.back-button {
+  font-size: 1.4vw; /* Tamanho de fonte reduzido para o botão de voltar */
+  background-color: #ff4d4d; /* Cor escura para o botão de voltar */
+  padding: 2% 4%; /* Padding ajustado para o botão de voltar */
+  width: auto; /* Tamanho automático para o botão */
+  margin-top: 2%; /* Espaço superior do botão */
+  display: inline-block; /* Exibe o botão inline */
+}
+
+button.back-button:hover {
+  background-color: #ffcb05; /* Cor mais escura no hover para o botão de voltar */
+}
+
+/* Ajustes para o Pokemon Search */
+.pokemon-search {
+  max-width: 60%; /* Define a largura como uma porcentagem da tela */
+  margin: 8rem auto; /* Margem de 8rem do topo, para garantir espaçamento adequado */
+  padding: 4%; /* Padding interno, também em porcentagem */
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.pokemon-search h2 {
+  font-family: 'Pokemon', sans-serif;
+  text-align: center;
+  color: #ff4d4d; /* Vermelho Pokémon */
+  font-size: 2rem;
+  margin-bottom: 5%; /* Espaço abaixo do título */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%; /* O campo de entrada ocupa toda a largura disponível */
+  padding: 8px; /* Ajusta o padding para deixar o campo mais adequado */
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 4%; /* Espaço inferior entre o input e o botão */
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #d32f2f; /* Destaque vermelho ao focar */
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.5); /* Efeito de sombra ao focar */
+}
+
+button {
+  width: 100%; /* O botão ocupa toda a largura disponível */
+  padding: 12px; /* Tamanho do botão ajustado */
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ff4d4d; /* Cor mais suave para o botão, mas ainda no tom vermelho Pokémon */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #9a1c1c; /* Tom mais escuro de vermelho no hover */
+}
+
+button:active {
+  background-color: #7a1c1c; /* Tom ainda mais escuro no clique */
+}
+
+form {
+  width: 100%;
+}
+
+form button {
+  margin-top: 4%; /* Margem superior do botão */
 }
